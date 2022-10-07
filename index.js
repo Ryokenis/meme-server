@@ -14,7 +14,10 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(
   cors({
-    origin: 'https://transcendent-crostata-5b022b.netlify.app',
+    origin: [
+      'https://transcendent-crostata-5b022b.netlify.app',
+      'http://localhost:3000',
+    ],
   })
 );
 

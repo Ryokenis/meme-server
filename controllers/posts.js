@@ -15,6 +15,7 @@ export const createPost = async (req, res) => {
 
   try {
     await newPost.save();
+    res.send('Post made');
   } catch (error) {
     res.status(409).json({ message: error.message });
   }
@@ -24,6 +25,7 @@ export const deletePost = async (req, res) => {
   const id = req.body;
   try {
     await Post.findOneAndDelete({ _id: id });
+    res.send('Post Deleted');
   } catch (error) {
     res.status().json({ message: error.message });
   }
@@ -37,6 +39,7 @@ export const editPost = async (req, res) => {
       { _id: newPost._id },
       { content: newPost.content, updatedAt: new Date() }
     );
+    res.send('Post Updated');
   } catch (error) {
     res.status(409).json({ message: error.message });
   }
