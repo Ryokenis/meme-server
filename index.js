@@ -12,7 +12,11 @@ const app = express();
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(cors());
+app.use(
+  cors({
+    origin: 'https://transcendent-crostata-5b022b.netlify.app/',
+  })
+);
 
 app.use('/posts', postRoutes);
 
