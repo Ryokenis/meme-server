@@ -15,8 +15,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(
   cors({
     origin: [
-      'http://localhost:3000/',
-      'https://frozen-plains-79548.herokuapp.com/',
+      'http://localhost:3000',
+      'https://transcendent-crostata-5b022b.netlify.app/',
     ],
   })
 );
