@@ -14,7 +14,10 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(
   cors({
-    origin: 'https://frozen-plains-79548.herokuapp.com/',
+    origin: [
+      'http://localhost:3000/',
+      'https://frozen-plains-79548.herokuapp.com/',
+    ],
   })
 );
 
