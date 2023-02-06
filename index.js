@@ -16,7 +16,7 @@ app.use(
   cors({
     origin: [
       'http://localhost:3000',
-      'https://transcendent-crostata-5b022b.netlify.app/',
+      'https://transcendent-crostata-5b022b.netlify.app',
     ],
   })
 );
